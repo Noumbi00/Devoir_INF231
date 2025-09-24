@@ -1,4 +1,4 @@
-DOSSIER ALGORITHMIQUE De a*b avec a et b possitifs:
+DOSSIER ALGORITHMIQUE:
 - Problème : Calculer le produit de deux entiers positifs a et b en utilisant uniquement l'opération +1.
 - Principe : apres avoir vérifié que les entier a et b sont possitifs,Le produit sera obtenu en additionnant l'entiers a à lui-même autant de fois que l'entier b.
 - Dictionnaire de données :
