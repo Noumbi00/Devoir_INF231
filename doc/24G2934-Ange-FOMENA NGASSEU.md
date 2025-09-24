@@ -17,7 +17,7 @@ ALGORITHME: inverser_tableau
 entrees: un tableau T de taille n 
 sortie: rien! ( car c'est un void)
  1- j'initialise i a 0 et j a n-1 
- 2- a l'aide de la boucle TANT QUE ; `a temp j'affecte Tab[i] et `a tab[i] j'affecte tab[j] et enfin `a tab[j] j'affecte temp avec pour condition i<j .
+ 2- a l'aide de la boucle TANT QUE ; `a temp j'affecte Tab[i] et`a tab[i] j'affecte tab[j] et enfin `a tab[j] j'affecte temp avec pour condition i<j .
  3- j'incremente i;
  4- je decremente j;
  
