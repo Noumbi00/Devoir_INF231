@@ -94,4 +94,4 @@ Copier le code
 - Espace : O(m × p)
   
 
-  CETTE QUESTION 2 A ETE TRAITER PAR deux personne ma collegue mbesse et moi meme.
+  CETTE QUESTION 2 A ETE TRAITER PAR DEUX PERSONNE MA COLLEGUE MBESSE EKOA ET MOI MEME.
