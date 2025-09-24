@@ -1,7 +1,7 @@
-DOSSIER ALGORITHMIQUE de l'inversion d'un tableau
+DOSSIER ALGORITHMIQUE 3 L'INVERSION D'UN TABLEAU
 
 
-PROBLEME
+PROBLEME 3
 
 On dispose d'un tableau de taille n contenant des elements et on veut ecrire une fonction qui inverse les element de ce tableau
 
