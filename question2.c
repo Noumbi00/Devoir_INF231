@@ -3,7 +3,7 @@
 int main() {
     int m, n, p, q;
 
-    printf("PRODUIT MATRICIELLE\n");
+    printf("PRODUIT MATRICIEL\n");
     
     printf("Entrez le nombre de lignes et de colonnes de la  matrice A: ");
     scanf("%d %d", &m, &n);
