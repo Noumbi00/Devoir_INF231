@@ -92,6 +92,6 @@ Copier le code
 ##  Complexité
 - Temps : O(m × n × p)  
 - Espace : O(m × p)
-- 
-- 
-  cette question 2 a ete traite par deux personne ma collegue mbesse et moi meme.
+  
+
+  CETTE QUESTION 2 A ETE TRAITER PAR deux personne ma collegue mbesse et moi meme.
