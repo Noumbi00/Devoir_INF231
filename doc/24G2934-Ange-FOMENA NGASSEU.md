@@ -27,61 +27,47 @@ sortie: rien! ( car c'est un void)
 
 
 
- # Problème 6 : Calcul de la médiane
+# Problème 2 : Produit matriciel
 
 ##  Problème
-Trouver la médiane d’un ensemble de nombres entiers.
+Calculer le produit de deux matrices `A` et `B` pour obtenir une matrice `C`.
 
 ##  Principe
-- La médiane est la valeur qui sépare la moitié supérieure et la moitié inférieure d’un ensemble de nombres.  
-- Pour un nombre impair d’éléments, c’est l’élément du milieu après tri.  
-- Pour un nombre pair d’éléments, c’est la moyenne des deux éléments du milieu après tri.
+Si `A` est une matrice de taille `m × n` et `B` une matrice de taille `n × p`, le produit `C = A × B` est une matrice `m × p` où chaque élément `c[i][j]` est calculé par :  
+c[i][j] = somme (A[i][k] * B[k][j]) pour k = 0 à n-1
+
+markdown
+Copier le code
 
 ##  Données
-- `tableau[]` : tableau des nombres entiers  
-- `n` : nombre d’éléments dans le tableau  
-- `mediane` : valeur de la médiane calculée  
+- `A[m][n]` : première matrice  
+- `B[n][p]` : deuxième matrice  
+- `C[m][p]` : matrice résultat  
 
 ##  Algorithme
-1. Trier le tableau en ordre croissant.  
-2. Si `n` est impair :  
-   - `mediane = tableau[n/2]`  
-3. Sinon (n pair) :  
-   - `mediane = (tableau[n/2 - 1] + tableau[n/2]) / 2`  
-4. Afficher la médiane.  
+1. Pour chaque ligne `i` de `A` :  
+   - Pour chaque colonne `j` de `B` :  
+     - Initialiser `C[i][j] = 0`  
+     - Pour `k = 0` à `n-1` :  
+       - `C[i][j] += A[i][k] * B[k][j]`  
+2. Afficher la matrice `C`.  
 
 ##  Exemple
-Tableau :  
-tableau = [3, 1, 4, 2, 5]
+A = |1 2|
+|3 4|
+
+B = |5 6|
+|7 8|
 
 yaml
 Copier le code
-Après tri :  
-[1, 2, 3, 4, 5]
-
-Copier le code
-Médiane :  
-mediane = 3
-
-cpp
-Copier le code
-
-Tableau pair :  
-tableau = [3, 1, 4, 2]
-
-yaml
-Copier le code
-Après tri :  
-[1, 2, 3, 4]
-
-Copier le code
-Médiane :  
-mediane = (2 + 3)/2 = 2.5
+Produit :
+C = |15+27 16+28| = |19 22|
+|35+47 36+48| |43 50|
 
 markdown
 Copier le code
 
 ##  Complexité
-- Temps : O(n log n) (tri)  
-- Espace : O(1) si tri en place
- 
+- Temps : O(m × n × p)  
+- Espace : O(m × p)
