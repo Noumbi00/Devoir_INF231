@@ -1,39 +1,61 @@
-J'ai ecrit le prgramme qui calcule la somme de deux matrices et celui qui verifie si un tableau est trie
+#  Dossier Algorithmique
 
 
-DOSSIER ALGORITHMIQUE
--LA SOMME DE MATRICES:
-- Probleme : Calculer la somme de deux matrices A et B de dimensions m x n.
-- Principe : La somme de deux matrices est une matrices de même format et  est calculée en additionnant les éléments correspondants au même indice des deux matrices(les a[i][j] +b[i][j]).
-- Dictionnaire de données :
-  A : matrice de dimensions m x n
-  B : matrice de dimensions m x n
-  S : matrice de dimensions m x n, résultat de la somme de A et B
-  m, n, i, j : entier
- 
-- Algorithme :
+
+1. **Somme de deux matrices**
+5. **Vérification si un tableau est trié**
+
+---
+
+## 1️ Somme de deux matrices
+
+###  Problème
+
+Calculer la somme de deux matrices `A` et `B` de dimensions `n × m`.
+
+###  Principe
+
+La somme de deux matrices est une matrice du même format.
+Chaque élément est obtenu en additionnant les éléments correspondants :
+
+$$
+S[i,j] = A[i,j] + B[i,j]
+$$
+
+### 🔹 Dictionnaire de données
+
+* `A` : matrice de réels de dimensions n × m
+* `B` : matrice de réels de dimensions n × m
+* `S` : matrice de réels de dimensions n × m (résultat)
+* `n, m` : entiers (dimensions des matrices)
+* `i, j` : entiers (indices de boucle)
+
+###  Algorithme
+
+```
 Algorithme SommeMatrices
-Variables :i, j, n, m : Entier;
-           A, B, S : Tableau [1..10, 1..10] de Réel;
+Variables :
+    i, j, n, m : Entier
+    A, B, S : Tableau[1..10, 1..10] de Réel
 
 Début
     Répéter
-        Ecrire("Entrer le nombre de lignes");
-        Lire(n);
-        Ecrire("Entrer le nombre de colonnes");
-        Lire(m);
-    Jusqu'à (n > 10 ET m > 10)
+        Ecrire("Entrer le nombre de lignes (≤10)")
+        Lire(n)
+        Ecrire("Entrer le nombre de colonnes (≤10)")
+        Lire(m)
+    Jusqu'à (n ≤ 10 ET m ≤ 10)
 
     Pour i allant de 1 à n Faire
-        Pour j allant de 1 à m Faire
-            Ecrire("Matrice A : Entrer l'élément de la ", i, "ème ligne et ", j, "ème colonne");
-            Lire(A[i,j]);
+        Pour j allant de  1 à m Faire
+            Ecrire("Matrcie A. entrer l'element de la" i "eme ligne et" j "eme colonne")
+            Lire(A[i,j])
         FinPour
     FinPour
 
     Pour i allant de 1 à n Faire
-        Pour j allant de  1 à m Faire
-            Ecrire("Matrice B : Entrer l'élément de la ", i, "ème ligne et ", j, "ème colonne");
+        Pour j allant de 1 à m Faire
+            Ecrire("Matrcie B. entrer l'element de la" i "eme ligne et" j "eme colonne"));
             Lire(B[i,j]);
         FinPour
     FinPour
@@ -44,88 +66,88 @@ Début
         FinPour
     FinPour
 
-    Pour i allant de 1 à n Faire
-        Pour j allantde  1 à m Faire
-            Ecrire(A[i,j]);
-        FinPour
-        
-    FinPour
-
+    Afficher A;
     Ecrire("+");
-    Pour i allant de 1 à n Faire
-        Pour j allant de 1 à m Faire
-            Ecrire(B[i,j]);
-        FinPour
-        
-    FinPour
-
+    Afficher B;
     Ecrire("=");
-    Pour i allant de 1 à n Faire
-        Pour j allantd de 1 à m Faire
-            Ecrire(S[i,j]);
-        FinPour
-    FinPour
+    Afficher S;
 Fin
+```
 
-- Complexite :
-  En temp: O(n*m)
-  En espace:O(n*m)
+###  Complexité
 
+* **Temps** : O(n × m)
+* **Espace** : O(n × m)
 
- 
-  
-  5- VERIFICATION SI UN TABLEAU EST TRIE
--Problème
-Vérifier si un tableau d’entiers est trié peut importe l'ordre.
--Principe : On parcourt le tableau en comparant chaque élément avec le suivant :
-   -Si tous les éléments respectent la relation T[i] ≤ T[i+1], alors le tableau est trié en ordre croissant.
-   -Si tous les éléments respectent la relation T[i] ≥ T[i+1], alors le tableau est trié en ordre décroissant.
-   -Si aucune de ces conditions n’est satisfaite pour l’ensemble du tableau, alors le tableau n’est pas trié.
+---
 
--Dictionnaire de données
-T : tableau d’entiers de taille n
-n : entier positif représentant la taille du tableau
-i : indice de parcours du tableau
-trie : booléen qui vaut Vrai si le tableau est trié, Faux sinon
+## 5 Vérification si un tableau est trié
 
--ALGORITHME
+###  Problème
+
+Vérifier si un tableau d’entiers est trié (ordre croissant ou décroissant).
+
+###  Principe
+
+* On teste si le tableau est **croissant** : `T[i] ≤ T[i+1]` pour tout `i`.
+* On teste si le tableau est **décroissant** : `T[i] ≥ T[i+1]` pour tout `i`.
+* Si l’un des deux est vrai, le tableau est trié. Sinon, il ne l’est pas.
+
+###  Dictionnaire de données
+
+* `T` : tableau d’entiers de taille n
+* `n` : entier positif (taille du tableau, ≤ 1000)
+* `i` : entier (indice de boucle)
+* `croissant`, `decroissant` : booléens
+
+###  Algorithme
+
+```
 Algorithme VerifierTableauTrie
 Variables
-    i, n : Entier;
-    T : Tableau[1..1000] d’Entiers;
-    trie : Entier;
+    i, n : Entier
+    T : Tableau[1..1000] d’Entiers
+    trie : Entier
 
-Debut
-    Repeter
-        Ecrire("Entrer la taille du tableau");
-        Lire(n);
-    Jusqu'a n ≤ 1000
+Début
+    Répéter
+        Ecrire("Entrer la taille du tableau")
+        Lire(n)
+    Jusqu'à n ≤ 1000
 
-    Pour i ← 1 à n Faire
-        Ecrire("Entrer le ", i, "eme element");
-        Lire(T[i]);
+    Pour i allant de  1 à n Faire
+        Ecrire("Entrer le ", i, " element")
+        Lire(T[i])
     FinPour
 
-    trie ← 1;
-    Pour i ← 0 à n Faire
+    trie ← 1
+    Pour i allant de 0 à n Faire
         Si T[i] <= T[i+1] Alors
-            trie ← 1;
+            trie ← 1
         FinSi
 
         Si T[i] >= T[i+1] Alors
-            trie ← 1;
+            trie ← 1
         Sinon
-            trie ← 0;
+            trie ← 0
         FinSi
     FinPour
 
     Si trie = 1 Alors
-        Ecrire("Le tableau est trie");
+        Ecrire("Le tableau est trie")
     Sinon
-        Ecrire("Le tableau n'est pas trie");
+        Ecrire("Le tableau n'est pas trie")
     FinSi
 Fin
 
--Complexite:
-Temps : O(n) 
-Espace : O(n+2)
+###  Complexité
+
+* **Temps** : O(n)
+* **Espace** : O(n) 
+
+
+
+    
+    
+  
+
