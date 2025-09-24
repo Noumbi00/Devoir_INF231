@@ -35,21 +35,21 @@ $$
 ```
 Algorithme SommeMatrices
 Variables :
-    i, j, n, m : Entier
-    A, B, S : Tableau[1..10, 1..10] de Réel
+    i, j, n, m : Entier;
+    A, B, S : Tableau[1..10, 1..10] de Réel;
 
 Début
     Répéter
-        Ecrire("Entrer le nombre de lignes (≤10)")
-        Lire(n)
-        Ecrire("Entrer le nombre de colonnes (≤10)")
-        Lire(m)
+        Ecrire("Entrer le nombre de lignes (≤10)");
+        Lire(n);
+        Ecrire("Entrer le nombre de colonnes (≤10)");
+        Lire(m);
     Jusqu'à (n ≤ 10 ET m ≤ 10)
 
     Pour i allant de 1 à n Faire
         Pour j allant de  1 à m Faire
-            Ecrire("Matrcie A. entrer l'element de la" i "eme ligne et" j "eme colonne")
-            Lire(A[i,j])
+            Ecrire("Matrcie A. entrer l'element de la" i "eme ligne et" j "eme colonne");
+            Lire(A[i,j]);
         FinPour
     FinPour
 
@@ -105,38 +105,38 @@ Vérifier si un tableau d’entiers est trié (ordre croissant ou décroissant).
 ```
 Algorithme VerifierTableauTrie
 Variables
-    i, n : Entier
-    T : Tableau[1..1000] d’Entiers
-    trie : Entier
+    i, n : Entier;
+    T : Tableau[1..1000] d’Entiers;
+    trie : Entier;
 
 Début
     Répéter
-        Ecrire("Entrer la taille du tableau")
-        Lire(n)
+        Ecrire("Entrer la taille du tableau");
+        Lire(n);
     Jusqu'à n ≤ 1000
 
     Pour i allant de  1 à n Faire
-        Ecrire("Entrer le ", i, " element")
-        Lire(T[i])
+        Ecrire("Entrer le ", i, " element");
+        Lire(T[i]);
     FinPour
 
     trie ← 1
     Pour i allant de 0 à n Faire
         Si T[i] <= T[i+1] Alors
-            trie ← 1
+            trie ← 1;
         FinSi
 
         Si T[i] >= T[i+1] Alors
-            trie ← 1
+            trie ← 1;
         Sinon
-            trie ← 0
+            trie ← 0;
         FinSi
     FinPour
 
     Si trie = 1 Alors
-        Ecrire("Le tableau est trie")
+        Ecrire("Le tableau est trie");
     Sinon
-        Ecrire("Le tableau n'est pas trie")
+        Ecrire("Le tableau n'est pas trie");
     FinSi
 Fin
 
