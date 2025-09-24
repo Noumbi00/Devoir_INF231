@@ -5,11 +5,16 @@
 et l'on retourne l'indice. Si l'on atteind la fin du tableau sans trouver la valeur, l'on retourne l'indication "La valeur ne se trouve pas dans le tableau"
 
 *Dictionnaires de donnees*
+
 Tab : Tableau de reels
+
 valeur : element a rechercher
+
 indice : la position d'un element ; initialise a zero
+
 *ALGORITHME*: 
--*initialisation* : On initialise l'indice a 0
+
+- *initialisation* : On initialise l'indice a 0
 - *parcours du tableau* : on parcours chaque element du tableau en commencant par le premier
 - *comparaison* : pour chaque element, on verifie si il est egal a la valeur recherchee
 - *retour en cas de succes* : si on trouve une correspondance, on retourne l'indice de l'element
