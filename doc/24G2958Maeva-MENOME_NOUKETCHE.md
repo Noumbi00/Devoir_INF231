@@ -22,7 +22,7 @@ $$
 S[i,j] = A[i,j] + B[i,j]
 $$
 
-### 🔹 Dictionnaire de données
+###  Dictionnaire de données
 
 * `A` : matrice de réels de dimensions n × m
 * `B` : matrice de réels de dimensions n × m
