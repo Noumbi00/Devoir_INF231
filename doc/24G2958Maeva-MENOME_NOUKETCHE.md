@@ -81,7 +81,7 @@ Fin
 
 ---
 
-## 5 Vérification si un tableau est trié
+## 2. Vérification si un tableau est trié
 
 ###  Problème
 
